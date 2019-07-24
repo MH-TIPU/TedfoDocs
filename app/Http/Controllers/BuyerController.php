@@ -69,6 +69,7 @@ class BuyerController extends Controller
         return redirect('buyer');
 
 
+
     }
 
     /**
@@ -126,6 +127,8 @@ class BuyerController extends Controller
         $buyer->save();
 
         return redirect('buyer');
+
+
     }
 
     /**

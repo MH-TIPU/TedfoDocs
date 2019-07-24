@@ -7,8 +7,9 @@
             <div class="header">
                 <h2 class="text-secondary"> All Sellers</h2>
                 <ul class="header-dropdown m-r--5">
-                    <li> <button onclick="window.location='{{ route("product.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Create</i> </button></li>
+                    <li> <button onclick="window.location='{{ route("product.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Add New</i> </button></li>
                 </ul>
+
             </div>
 
             <div class="body table-responsive">
@@ -23,14 +24,10 @@
                     </thead>
 
                     <tbody>
+
                     @foreach($products as $product)
                         <tr>
-                            <td>
-
-                                <input type="checkbox" id="md_checkbox_10" class="chk-col-green" checked />
-                                <label for="md_checkbox_10">GREEN</label>
-
-                                {{$product->name}}</td>
+                            <td>{{$product->name}}</td>
                             <td>{{$product->code_sku}}</td>
                             <td>{{$product->hs_code}}</td>
                             <td>
@@ -50,6 +47,8 @@
 
                         </tr>
                     @endforeach
+
+
                     </tbody>
                 </table>
             </div>

@@ -10,4 +10,8 @@ class Proforma extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function ProductDetail(){
+        return $this->hasMany('App\ProductDetail');
+    }
 }

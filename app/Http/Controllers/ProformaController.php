@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Proforma;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProformaController extends Controller
 {
@@ -14,7 +16,8 @@ class ProformaController extends Controller
      */
     public function index()
     {
-        //
+        $Proformas = User::find(Auth::id())->Proforma;
+        return view('pages/proformas/proforma', compact('Proformas'));
     }
 
     /**
@@ -24,7 +27,8 @@ class ProformaController extends Controller
      */
     public function create()
     {
-        //
+        $products = User::find(Auth::id())->Product;
+        return view('pages/proformas/newProforma',compact('products'));
     }
 
     /**

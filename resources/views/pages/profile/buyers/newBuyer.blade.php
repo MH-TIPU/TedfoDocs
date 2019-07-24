@@ -91,23 +91,23 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <h2 class="card-inside-title">Additional Information</h2>
+                    <input type="hidden" id="toogle" value="0" name="toogle">
 
-                    <div class="switch">
+                    <div class="switch" id="switch">
                         <label>OFF<input type="checkbox" onchange="myFunction()"><span class="lever"></span>ON</label>
                     </div>
 
                     <div class="row clearfix" id="info" style="display:none">
                         <div class="col-sm-12">
-                            <div class="form-group form-float form-group">
+                            <div class="form-group form-float form-group" id="other-info">
                                 <div class="form-line">
-                                    <textarea rows="1" class="form-control no-resize auto-growth" name="add_info" placeholder="Other Information" ></textarea>
+                                    <textarea rows="1" class="form-control no-resize auto-growth" name="add_info[]" placeholder="Other Information" ></textarea>
                                 </div>
                             </div>
-                           <a href="#"> <i class="zmdi zmdi-plus"> Add More</i></a>
+                           <a onclick="addMore(this)" id="btn-add-more" class="btn btn-raised waves-effect -sm"> <i class="zmdi zmdi-plus"></i></a>
                         </div>
                     </div>
 
@@ -140,6 +140,17 @@
             x.style.display = "block";
         }
     }
+
+    function addMore(where) {
+        var main = document.getElementById("other-info");
+        var cntr = (main.datacntr || 0) + 1;
+        main.datacntr = cntr;
+
+        var clone = main.cloneNode(true);
+        clone.id = "section" + cntr;
+        where.parentNode.insertBefore(clone, where);
+    }
+
 
 </script>
 

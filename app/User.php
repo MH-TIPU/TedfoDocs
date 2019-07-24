@@ -73,5 +73,9 @@ class User extends Authenticatable
     public function Proforma(){
         return $this->hasMany('App\Proforma');
     }
-    
+
+    public function Catalogue(){
+        return $this->hasMany('App\Catalogue');
+    }
+
 }

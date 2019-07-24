@@ -32,7 +32,6 @@
                     <div class="row clearfix">
 
 
-
                         <div class="col-sm-8">
                             <div class="form-group form-float form-group">
                                 <div class="form-line">

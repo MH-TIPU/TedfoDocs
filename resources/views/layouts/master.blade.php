@@ -111,13 +111,14 @@
 
             <li> <a href="{{route('cnf.index')}}"><i class="zmdi zmdi-boat"></i><span>CNF</span> </a> </li>
             <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-codepen"></i><span>Product</span> </a></li>
+            <li><a href="{{route('catalogue.index')}}"><i class="fas fa-list"></i><span>Catalogue</span> </a></li>
 
             <li><a href="#" class="menu-toggle"><i class="fas fa-receipt"></i><span>Documents</span></a>
                 <ul class="ml-menu">
 
                     <a href="#" class="menu-toggle"><i class="far fa-file-alt"></i><span>Sales Documents</span></a>
                     <ul class="ml-menu">
-                        <li><a href="#">Proforma Invoice</a> </li>
+                        <li><a href="{{route('proforma.index')}}">Proforma Invoice</a> </li>
                         <li><a href="#"> Quotation</a> </li>
                         <li><a href="#"> Purchase Order</a> </li>
                         <li><a href="#"> Order Confirmation</a> </li>

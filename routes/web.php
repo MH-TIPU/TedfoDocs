@@ -36,6 +36,8 @@ Route::resource('buyerBank','BuyerBankController');
 Route::resource('cnf','CnfController');
 Route::resource('product','ProductController');
 Route::resource('sellerBank','SellerBankController');
+Route::resource('catalogue','CatalogueController');
+Route::resource('proforma','ProformaController');
 
 
 Route::get('logout', 'Auth\LoginController@logout');
