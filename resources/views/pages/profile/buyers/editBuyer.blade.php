@@ -23,10 +23,11 @@
                 @method('PATCH')
                 <div class="card">
 
+                    <div class="header">
+                        <h2 class="text-secondary"> Edit Buyer profile</h2>
+                    </div>
+
                 <div class="body">
-
-                    <small>Create new Buyer profile</small>
-
 
                     <h2 class="card-inside-title">Basic Information</h2>
                     <div class="row clearfix">
@@ -102,23 +103,23 @@
 
                     </div>
 
-                    <h2 class="card-inside-title">Additional Information</h2>
+                    {{--<h2 class="card-inside-title">Additional Information</h2>--}}
 
-                    <div class="switch">
-                        <label>OFF<input type="checkbox" onchange="myFunction()"><span class="lever"></span>ON</label>
-                    </div>
+                    {{--<div class="switch">--}}
+                        {{--<label>OFF<input type="checkbox" onchange="myFunction()"><span class="lever"></span>ON</label>--}}
+                    {{--</div>--}}
 
-                    <div class="row clearfix" id="info" style="display:none">
-                        <div class="col-sm-12">
-                            <div class="form-group form-float form-group">
-                                <label class="text-primary">Other Information</label>
-                                <div class="form-line">
-                                    <textarea rows="1" class="form-control no-resize auto-growth" name="add_info" value="Other Information" ></textarea>
-                                </div>
-                            </div>
-                            <a href="#"> <i class="zmdi zmdi-plus"> Add More</i></a>
-                        </div>
-                    </div>
+                    {{--<div class="row clearfix" id="info" style="display:none">--}}
+                        {{--<div class="col-sm-12">--}}
+                            {{--<div class="form-group form-float form-group">--}}
+                                {{--<label class="text-primary">Other Information</label>--}}
+                                {{--<div class="form-line">--}}
+                                    {{--<textarea rows="1" class="form-control no-resize auto-growth" name="add_info" value="Other Information" ></textarea>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<a href="#"> <i class="zmdi zmdi-plus"> Add More</i></a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
 
                     <div class="row clearfix">

@@ -23,10 +23,11 @@
                 @method('PATCH')
                 <div class="card">
 
+                    <div class="header">
+                        <h2 class="text-secondary"> Edit Seller profile</h2>
+                    </div>
+
                 <div class="body">
-
-                    <small>Edit new Seller profile</small>
-
 
                     <h2 class="card-inside-title">Basic Information</h2>
                     <div class="row clearfix">

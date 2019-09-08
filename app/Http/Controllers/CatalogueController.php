@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Catalogue;
 use App\CatalogueItem;
 use App\Product;
+use App\Seller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,8 +41,10 @@ class CatalogueController extends Controller
     public function create()
     {
         $products = User::find(Auth::id())->Product;
+        $sellers = User::find(Auth::id())->Seller()->paginate(2);;
 
-        return view('pages/catalogues/newCatalogue',compact('products'));
+
+        return view('pages/catalogues/newCatalogue',compact('products','sellers'));
     }
 
     /**
@@ -54,44 +57,15 @@ class CatalogueController extends Controller
     {
 
         $request->validate([
-            'name'=> 'required',
-            'email'=> 'required',
-            'phone'=> 'required',
-            'factory_address'=> 'required',
-            'company_address'=> 'required',
+            'seller'=> 'required',
         ]);
 
-        $catalogue = new Catalogue();
+        $seller = Seller::find($request->seller);
 
-        $catalogue->name = $request->name;
-        $catalogue->email = $request->email;
-        $catalogue->phone = $request->phone;
-        $catalogue->factory_address = $request->factory_address;
-        $catalogue->company_address = $request->company_address;
+        $ids = $request->ids;
 
-        $catalogue->user_id = Auth::id();
-
-
-        $catalogue->save();
-            for($i = 0; $i < sizeof($request->ids);$i++){
-
-                $catalogueItem = new CatalogueItem();
-                $id = $request->ids[$i];
-                $product = Product::find($id);
-                $catalogueItem->code_sku = $product->code_sku;
-                $catalogueItem->photo = $product->photo;
-                $catalogueItem->description = $product->description;
-                $catalogueItem->moq = $request->get('moqs'.$id);
-                $catalogueItem->price = $request->get('prices'.$id);
-
-                $catalogueItem->catalogue_id = $catalogue->id;
-
-                $catalogueItem->save();
-            }
-
-
-
-            return redirect('catalogue');
+//        dd($ids);
+        return view('pages/catalogues/editCatalogue',compact('seller','ids'));
 
     }
 
@@ -129,9 +103,44 @@ class CatalogueController extends Controller
      * @param  \App\Catalogue  $catalogue
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Catalogue $catalogue)
+    public function update(Request $request, $id)
     {
-        //
+
+        $catalogue = new Catalogue();
+
+        $seller = Seller::find($id);
+
+
+        $catalogue->name = $seller->business_name;
+        $catalogue->email = $seller->email;
+        $catalogue->phone = $seller->phone_no;
+        $catalogue->factory_address = $seller->factory_add;
+        $catalogue->company_address = $seller->office_add;
+
+        $catalogue->user_id = Auth::id();
+
+
+        $catalogue->save();
+
+        for($i = 0; $i < sizeof($request->ids); $i++){
+
+            $catalogueItem = new CatalogueItem();
+            $id = $request->ids[$i];
+            $product = Product::find($id);
+            $catalogueItem->code_sku = $product->code_sku;
+            $catalogueItem->photo = $product->photo;
+            $catalogueItem->description = $product->description;
+            $catalogueItem->moq = $request->get('moqs'.$id);
+            $catalogueItem->price = $request->get('prices'.$id);
+
+            $catalogueItem->catalogue_id = $catalogue->id;
+
+            $catalogueItem->save();
+        }
+
+
+
+        return redirect('catalogue');
     }
 
     /**

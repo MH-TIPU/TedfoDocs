@@ -37,7 +37,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-   public function Shipper(){
+    public function Shipper(){
        return $this->hasMany('App\Shipper');
    }
 
@@ -77,5 +77,4 @@ class User extends Authenticatable
     public function Catalogue(){
         return $this->hasMany('App\Catalogue');
     }
-
 }

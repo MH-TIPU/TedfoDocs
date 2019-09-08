@@ -11,4 +11,3 @@ class SellerBank extends Model
         return $this->belongsTo('App\User');
     }
 }
-

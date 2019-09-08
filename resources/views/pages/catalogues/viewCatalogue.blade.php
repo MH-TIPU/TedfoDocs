@@ -31,9 +31,9 @@
                                 </thead>
                                 <tbody>
 
-                                @foreach($catalogueItems as $catalogueItem)
+                                @foreach($catalogueItems as $key=>$catalogueItem)
                                     <tr>
-                                        <td>{{$catalogueItem->id}}</td>
+                                        <td>{{$key+1}}</td>
 
                                         <td>{{$catalogueItem->code_sku}}</td>
 
@@ -56,8 +56,13 @@
                 </div>
                 <hr>
 
-                <div class="hidden-print col-md-12 text-right">
-                    <a href="#" class="btn btn-raised btn-success"><i class="zmdi zmdi-print"></i></a>
+                <div class="row">
+                    <div class=" col-md-1 text-right">
+                        <a href="#" class="btn btn-raised btn-success"><i class="zmdi zmdi-print"></i></a>
+                    </div>
+                    <div class=" col-md-1 text-right">
+                        <a href="#" class="btn btn-raised btn-danger"><i class="zmdi zmdi-email"></i></a>
+                    </div>
                 </div>
             </div>
 

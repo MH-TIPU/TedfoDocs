@@ -5,7 +5,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="card">
             <div class="header">
-                <h2 class="text-secondary"> All Buyers</h2>
+                <h2 class="text-secondary"> All Seller Banks</h2>
                 <ul class="header-dropdown m-r--5">
                     <li> <button onclick="window.location='{{ route("sellerBank.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Create</i> </button></li>
                 </ul>

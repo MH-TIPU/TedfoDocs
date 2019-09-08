@@ -21,9 +21,11 @@
             @csrf
             <div class="card">
 
-                <div class="body">
+                <div class="header">
+                    <h2 class="text-secondary"> Create New Buyer Bank</h2>
+                </div>
 
-                    <small>Create new Buyer Bank</small>
+                <div class="body">
 
 
                     <h2 class="card-inside-title">Basic Information</h2>

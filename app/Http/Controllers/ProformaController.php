@@ -28,7 +28,12 @@ class ProformaController extends Controller
     public function create()
     {
         $products = User::find(Auth::id())->Product;
-        return view('pages/proformas/newProforma',compact('products'));
+        $Proformas = User::find(Auth::id())->Proforma;
+        $buyers = User::find(Auth::id())->Buyer;
+        $sellers = User::find(Auth::id())->Seller;
+
+        $buyerBanks = User::find(Auth::id())->BuyerBank;
+        return view('pages/proformas/newProforma',compact('products','Proformas','buyers','sellers','buyerBanks'));
     }
 
     /**

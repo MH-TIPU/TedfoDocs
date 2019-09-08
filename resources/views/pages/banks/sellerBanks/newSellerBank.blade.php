@@ -21,9 +21,11 @@
             @csrf
             <div class="card">
 
-                <div class="body">
+                <div class="header">
+                    <h2 class="text-secondary"> Create new Seller Bank</h2>
+                </div>
 
-                    <small>Create new Seller Bank</small>
+                <div class="body">
 
 
                     <h2 class="card-inside-title">Basic Information</h2>
@@ -112,7 +114,7 @@
                         <div class="col-sm-12">
                             <div class="form-group form-float form-group">
                                 <div class="form-line">
-                                    <input type="text" class="form-control" name="phone_no"  placeholder="Phone Number" />
+                                    <input type="text" class="form-control" name="phone_no"  placeholder="Phone Number" required/>
                                 </div>
                             </div>
                         </div>

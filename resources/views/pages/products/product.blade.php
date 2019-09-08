@@ -1,3 +1,4 @@
+
 @extends('layouts.master')
 
 @section('content')
@@ -5,7 +6,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="card">
             <div class="header">
-                <h2 class="text-secondary"> All Sellers</h2>
+                <h2 class="text-secondary"> All Products</h2>
                 <ul class="header-dropdown m-r--5">
                     <li> <button onclick="window.location='{{ route("product.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Add New</i> </button></li>
                 </ul>
@@ -17,7 +18,7 @@
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th data-breakpoints="xs">code/SKU</th>
+                        <th data-breakpoints="xs">Code/SKU</th>
                         <th data-breakpoints="xs">HS Code</th>
                         <th data-breakpoints="xs">Photo</th>
                     </tr>
@@ -31,7 +32,7 @@
                             <td>{{$product->code_sku}}</td>
                             <td>{{$product->hs_code}}</td>
                             <td>
-                                <img src="{{Storage::url($product->photo)}}" height="50" width="50" alt="">
+                                <img src="{{asset(url('storage/app/'.$product->photo))}}" height="50" width="50" alt="">
                             </td>
 
                             <td>

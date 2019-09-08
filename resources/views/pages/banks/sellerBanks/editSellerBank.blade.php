@@ -23,10 +23,11 @@
 
                 <div class="card">
 
+                    <div class="header">
+                        <h2 class="text-secondary"> Edit Seller Bank</h2>
+                    </div>
+
                 <div class="body">
-
-                    <small>Create new Seller Bank</small>
-
 
                     <h2 class="card-inside-title">Basic Information</h2>
                     <div class="row clearfix">

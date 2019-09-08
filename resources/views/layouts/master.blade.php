@@ -1,72 +1,57 @@
 <!doctype html>
-<html class="no-js ">
+<html class="no-js " lang="en">
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-
-    <title>@yield('title')</title>
-    <!-- Favicon-->
-    <link rel="icon" href="{{asset('favicon.ico" type="image/x-icon')}}">
-    <link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('plugins/jvectormap/jquery-jvectormap-2.0.3.css')}}"/>
-    <link rel="stylesheet" href="{{asset('plugins/morrisjs/morris.css')}}" />
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('css/color_skins.css')}}">
-
-    {{--Custom Product css--}}
-    <link rel="stylesheet" href="{{asset('css/productPage.css')}}">
+<title>@yield('title')</title>
+<!-- Favicon-->
 
 
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+<link href="{{ asset('assetss/plugins/animate-css/animate.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('assetss/plugins/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assetss/plugins/jvectormap/jquery-jvectormap-2.0.3.css') }}"/>
+<link rel="stylesheet" href="{{ asset('assetss/plugins/morrisjs/morris.css') }}" />
+<!-- Custom Css -->
+<link rel="stylesheet" href="{{ asset('assetss/css/main.css') }}">
+<link rel="stylesheet" href="{{ asset('assetss/css/color_skins.css') }}">
+
+<link rel="stylesheet" href="{{ asset('css/productPage.css') }}">
 
 
 
 </head>
-
 <body class="theme-green">
 <!-- Page Loader -->
-
 <div class="page-loader-wrapper">
-    <div class="loader">
+    <div class="loader">        
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
-        <p>Please wait...</p>
+        <p>Please Wait</p>
         <div class="m-t-30"><img src="{{asset('images/tedfo.png')}}" width="48" height="48" alt="Tedfo Docs"></div>
     </div>
 </div>
 <!-- Overlay For Sidebars -->
-<div class="overlay"></div><!-- Search  -->
-<div class="search-bar">
-    <div class="search-icon"> <i class="material-icons">search</i> </div>
-    <input type="text" placeholder="Enter here...">
-    <div class="close-search"> <i class="material-icons">close</i> </div>
-</div>
 
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="col-12">
-
+        
         <div class="navbar-header">
             <a class="navbar-brand" href="#"><img src="{{asset('images/tedfo.png')}}" width="20" height="20"> </a>
-            <a class="navbar-brand" href="#">Tedfo Docs</a>
-
+            <a class="navbar-brand" href="#">T Docs</a>
         </div>
-
         <ul class="nav navbar-nav navbar-left">
-            <li><a href="javascript:void(0);" class="ls-toggle-btn " data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-            <li><a href="#" class="inbox-btn hidden-sm-down" data-close="true"><i class="zmdi zmdi-email"></i></a></li>
-
-
+            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ route('logout') }}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
+            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
         </ul>
     </div>
 </nav>
@@ -76,21 +61,21 @@
     <!-- User Info -->
     <div class="user-info">
         <div class="image">
-            <img src="{{asset('images/xs/avatar1.jpg')}}" width="48" height="48" alt="User" />
+            <img src="{{ asset('assetss/images/xs/avatar1.jpg') }}" width="48" height="48" alt="User" />
         </div>
-
         <div class="info-container">
             <div class="name">{{Auth::user()->name}}</div>
             <div class="email">{{Auth::user()->email}}</div>
         </div>
-
     </div>
-    <!-- #User Info -->
+    <!-- #User Info --> 
     <!-- Menu -->
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-            <li> <a href="/"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li> <a href="#"><i class="zmdi zmdi-home">
+                </i><span>Dashboard</span></a>
+            </li>
 
             <li class="open active"> <a href="#" class="menu-toggle"><i class="zmdi zmdi-accounts"></i><span>Profiles</span></a>
                 <ul class="ml-menu">
@@ -119,16 +104,16 @@
                     <a href="#" class="menu-toggle"><i class="far fa-file-alt"></i><span>Sales Documents</span></a>
                     <ul class="ml-menu">
                         <li><a href="{{route('proforma.index')}}">Proforma Invoice</a> </li>
-                        <li><a href="#"> Quotation</a> </li>
-                        <li><a href="#"> Purchase Order</a> </li>
-                        <li><a href="#"> Order Confirmation</a> </li>
+                        <li><a href="{{route('quotation.index')}}"> Quotation</a> </li>
+                        <li><a href="{{route('purchaseOrder.index')}}"> Purchase Order</a> </li>
+                        <li><a href="{{route('orderConfirmation.index')}}"> Order Confirmation</a> </li>
                     </ul>
 
                     <a href="#" class="menu-toggle"><i class="far fa-file-alt"></i><span>Shipping Documents</span></a>
                     <ul class="ml-menu">
-                        <li><a href="#">Commercial Invoice</a> </li>
+                        <li><a href="{{route('commercialInvoice.index')}}">Commercial Invoice</a></li>
                         <li><a href="#"> Packing List</a> </li>
-                        <li><a href="#"> Certificate of Origin</a> </li>
+                        <li><a href="{{route('certificate.index')}}"> Certificate of Origin</a></li>
                         <li><a href="#"> Packing List for Customer</a> </li>
                         <li><a href="#"> Packing List for Buyer</a> </li>
                     </ul>
@@ -136,13 +121,15 @@
                 </ul>
             </li>
 
-
             <li><a href="#"><i class="fas fa-chart-bar"></i><span>Report</span> </a></li>
-
         </ul>
+            
     </div>
-    <!-- #Menu -->
-</aside>
+    <!-- #Menu --> 
+</aside>    
+<!-- Right Sidebar -->
+
+
 
 
 
@@ -151,52 +138,59 @@
     <div class="block-header">
         <div class="row">
             <div class="col-lg-7 col-md-6 col-sm-12">
-                <small class="text-muted"> Welcome to Tedfo Docs</small>
+                <small class="text-muted"> Welcome to T Docs</small>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12">
-
-                <ol class="breadcrumb float-md-right">
-                    <li class="breadcrumb-item active" href="{{route('home')}}">
-                        <i class="zmdi zmdi-home"></i>
-                    </li>
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="/"><i class="zmdi zmdi-home"></i></a></li>
 
                     @for($i = 1; $i <= count(Request::segments()); $i++)
-                        <li>
+                        <li class="breadcrumb-item">
                             <a href="{{ URL::to( implode( '/', array_slice(Request::segments(), 0 ,$i, true)))}}">
-                                / {{strtoupper(Request::segment($i))}}
+                                 {{strtoupper(Request::segment($i))}}
                             </a>
                         </li>
                     @endfor
-                </ol>
 
+                </ul>
             </div>
         </div>
     </div>
-    @yield('content')
+
+
+    <div class="container-fluid">
+         @yield('content')
+    </div>
 </section>
+<!-- Jquery Core Js --> 
 
-<div class="footer">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 
-</div>
-
-<!-- Jquery Core Js -->
-<script src="{{asset('bundles/libscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js -->
-<script src="{{asset('bundles/vendorscripts.bundle.js')}}"></script> <!-- Lib Scripts Plugin Js -->
-
-<script src="{{asset('bundles/jvectormap.bundle.js')}}"></script> <!-- JVectorMap Plugin Js -->
-<script src="{{asset('bundles/morrisscripts.bundle.js')}}"></script><!-- Morris Plugin Js -->
-<script src="{{asset('bundles/sparkline.bundle.js')}}"></script> <!-- Sparkline Plugin Js -->
-<script src="{{asset('bundles/knob.bundle.js')}}"></script> <!-- Jquery Knob Plugin Js -->
-
-<script src="{{asset('bundles/mainscripts.bundle.js')}}"></script>
-<script src="{{asset('js/pages/index.js')}}"></script>
-<script src="{{asset('js/pages/charts/jquery-knob.min.js')}}"></script>
-<script src="{{asset('assets/bundles/mainscripts.bundle.js')}}"></script>
-<script src="{{asset('js/productPage.js')}}"></script>
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
 
 
-<script scr="{{asset('js/app.js')}}" > </script>
+<script src="{{ asset('assetss/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{{ asset('assetss/bundles/vendorscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js --> 
+
+<script src="{{ asset('assetss/bundles/jvectormap.bundle.js') }}"></script> <!-- JVectorMap Plugin Js -->
+<script src="{{ asset('assetss/bundles/morrisscripts.bundle.js') }}a"></script><!-- Morris Plugin Js -->
+<script src="{{ asset('assetss/bundles/sparkline.bundle.js') }}"></script> <!-- Sparkline Plugin Js -->
+<script src="{{ asset('assetss/bundles/knob.bundle.js') }}"></script> <!-- Jquery Knob Plugin Js -->
+
+<script src="{{ asset('assetss/js/pages/index.js') }}"></script>
+<script src="{{ asset('assetss/js/pages/charts/jquery-knob.min.js') }}"></script>
 
 
+
+<script src="{{ asset('assetss/plugins/jquery-validation/jquery.validate.js') }}"></script> <!-- Jquery Validation Plugin Css -->
+<script src="{{ asset('assetss/plugins/jquery-steps/jquery.steps.js') }}"></script> <!-- JQuery Steps Plugin Js -->
+
+<script src="{{ asset('assetss/bundles/mainscripts.bundle.js') }}"></script><!-- Custom Js -->
+<script src="{{ asset('assetss/js/pages/forms/form-wizard.js') }}"></script>
+
+
+<script src="{{ asset('js/productPage.js') }}"></script>
 </body>
 </html>
+ 

@@ -23,10 +23,12 @@
             @csrf
             <div class="card">
 
+                <div class="header">
+                    <h2 class="text-secondary"> Add new Product</h2>
+                </div>
+
+
                 <div class="body">
-
-                    <small>Create new Product</small>
-
 
                     <h2 class="card-inside-title">Basic Information</h2>
                     <div class="row clearfix">
@@ -156,7 +158,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                     </div>
 

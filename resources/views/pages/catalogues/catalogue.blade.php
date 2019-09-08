@@ -16,7 +16,7 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>#id</th>
+                        <th>#</th>
                         <th>Name</th>
                         <th data-breakpoints="xs">Email</th>
                         <th data-breakpoints="xs">Phone</th>
@@ -27,9 +27,9 @@
 
                     <tbody>
 
-                    @foreach($catagogues as $catagogue)
+                    @foreach($catagogues as $key=>$catagogue)
                         <tr>
-                            <td>{{$catagogue->id}}</td>
+                            <td>{{$key+1}}</td>
                             <td>{{$catagogue->name}}</td>
                             <td>{{$catagogue->email}}</td>
                             <td>{{$catagogue->phone}}</td>

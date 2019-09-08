@@ -53,7 +53,7 @@ class SellerBankController extends Controller
             'bin_no'=> 'required',
             'currency'=> 'required',
             'email'=> 'required',
-            'Phone_no'=> 'required',
+            'phone_no'=> 'required',
             'rm_name'=> 'required',
             'rm_mobile_num'=> 'required',
         ]);

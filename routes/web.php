@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return redirect('home');
 });
@@ -19,14 +18,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('temp', function () {
-    return view('temp');
-});
 
 
 Route::resource('seller','SellerController');
@@ -38,6 +29,14 @@ Route::resource('product','ProductController');
 Route::resource('sellerBank','SellerBankController');
 Route::resource('catalogue','CatalogueController');
 Route::resource('proforma','ProformaController');
+
+
+Route::resource('quotation','QuotationController');
+Route::resource('certificate','CertificateController');
+Route::resource('commercialInvoice','CommercialInvoiceController');
+Route::resource('orderConfirmation','OrderConfirmationController');
+Route::resource('packingListBuyer','PackingListBuyerController');
+Route::resource('purchaseOrder','PurchaseOrderController');
 
 
 Route::get('logout', 'Auth\LoginController@logout');

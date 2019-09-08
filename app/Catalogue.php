@@ -11,8 +11,8 @@ class Catalogue extends Model
         return $this->belongsTo('App\User');
     }
 
-
     public function CatalogueItem(){
         return $this->hasMany('App\CatalogueItem');
     }
+    
 }

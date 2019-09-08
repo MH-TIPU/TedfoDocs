@@ -23,9 +23,11 @@
                 @method('PATCH')
                 <div class="card">
 
-                <div class="body">
+                    <div class="header">
+                        <h2 class="text-secondary"> Edit CNF profile</h2>
+                    </div>
 
-                    <small>Create new CNF profile</small>
+                <div class="body">
 
 
                     <h2 class="card-inside-title">Basic Information</h2>

@@ -1,48 +1,191 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="col-lg-12 col-md-12 col-sm-12">
-        <div class="row clearfix">
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center">
-                <div class="card tasks_report">
-                    <div class="body">
-                        <input type="text" class="knob dial1" value="66" data-width="90" data-height="90" data-thickness="0.05" data-fgColor="#00ced1" readonly>
-                        <h6 class="m-t-20">Satisfaction Rate</h6>
-                        <small class="displayblock">47% Average <i class="zmdi zmdi-trending-up"></i></small>
-                        <div class="sparkline m-t-30" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="2" data-bar-Spacing="5" data-bar-Color="#00ced1">5,8,3,4,8,9,7,2,9,5</div>
+
+
+<div class="row clearfix">
+                <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <h3>100 <i class="zmdi zmdi-account">  </i></h3>
+                            <p class="text-muted"> Seller Profiles</p>
+                            <div class="progress">
+                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                            </div>
+                            <span class="text-small">20% more than last month</span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <h3>100 <i class="zmdi zmdi-accounts">  </i></h3>
+                            <p class="text-muted">Buyer Profiles</p>
+                            <div class="progress">
+                                <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <span class="text-small">4% more than last month</span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <h3 >1200 <i class="zmdi zmdi-plus-box"> </i> </h3>
+                            <p class="text-muted">Products</p>
+                            <div class="progress">
+                                <div class="progress-bar l-amber" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <span class="text-small">15% more than last month</span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-md-6 col-xs-12">
+                    <div class="card">
+                        <div class="body">
+                            <h3>1000 <i class="zmdi zmdi-thumb-up"> </i></h3>
+                            <p class="text-muted">Order confirmed</p>
+                            <div class="progress">
+                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <span class="text-small">10% higher than last month</span> </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center">
-                <div class="card tasks_report">
-                    <div class="body">
-                        <input type="text" class="knob dial2" value="26" data-width="90" data-height="90" data-thickness="0.05" data-fgColor="#ffa07a" readonly>
-                        <h6 class="m-t-20">Orders Panding</h6>
-                        <small class="displayblock">13% Average <i class="zmdi zmdi-trending-down"></i></small>
-                        <div class="sparkline m-t-30" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="2" data-bar-Spacing="5" data-bar-Color="#ffa07a">9,5,1,5,4,8,7,6,3,4</div>
+
+            <div class="row clearfix">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Best Clients</h2>
+                        </div>
+                        <div class="body table-responsive members_profiles">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Deals</th>
+                                    <th>Type</th>
+                                    <th>Reviews</th>
+                                    <th>Progress</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        <a href="javascript:;">Victoria</a>
+                                    </td>
+                                    <td>$651</td>
+                                    <td>Buyer</td>
+                                    <td>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star-half"></i>
+                                    </td>
+                                    <td>
+                                        <div class="progress" >
+                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        <a href="javascript:;">Logan</a>
+                                    </td>
+                                    <td>$420</td>
+                                    <td>Buyer</td>
+                                    <td>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                    </td>
+                                    <td>
+                                        <div class="progress" >
+                                            <div class="progress-bar l-green" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100" style="width: 87%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <a href="javascript:;">Isabella</a>
+                                    </td>
+                                    <td>$350</td>
+                                    <td>Seller</td>
+                                    <td>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar l-amber" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>
+                                        <a href="javascript:;">Lucas</a>
+                                    </td>
+                                    <td>$300</td>
+                                    <td>Seller</td>
+                                    <td>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star-half"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar l-blue" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        <a href="javascript:;">Jackson</a>
+                                    </td>
+                                    <td>$201</td>
+                                    <td>Seller</td>
+                                    <td>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                        <i class="zmdi zmdi-star-outline"></i>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100" style="width:32%;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center">
-                <div class="card tasks_report">
-                    <div class="body">
-                        <input type="text" class="knob dial3" value="76" data-width="90" data-height="90" data-thickness="0.05" data-fgColor="#8fbc8f" readonly>
-                        <h6 class="m-t-20">Productivity Goal</h6>
-                        <small class="displayblock">75% Average <i class="zmdi zmdi-trending-up"></i></small>
-                        <div class="sparkline m-t-30" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="2" data-bar-Spacing="5" data-bar-Color="#8fbc8f">6,4,9,8,6,5,4,5,3,2</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 text-center">
-                <div class="card tasks_report">
-                    <div class="body">
-                        <input type="text" class="knob dial4" value="88" data-width="90" data-height="90" data-thickness="0.05" data-fgColor="#00adef" readonly>
-                        <h6 class="m-t-20">Total Revenue</h6>
-                        <small class="displayblock">54% Average <i class="zmdi zmdi-trending-up"></i></small>
-                        <div class="sparkline m-t-30" data-type="bar" data-width="97%" data-height="30px" data-bar-Width="2" data-bar-Spacing="5" data-bar-Color="#00adef">3,5,7,9,5,1,4,5,6,8</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 @endsection

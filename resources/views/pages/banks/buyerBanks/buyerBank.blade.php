@@ -5,7 +5,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="card">
             <div class="header">
-                <h2 class="text-secondary"> All Buyers</h2>
+                <h2 class="text-secondary"> All Buyer Banks</h2>
                 <ul class="header-dropdown m-r--5">
                     <li> <button onclick="window.location='{{ route("buyerBank.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Create</i> </button></li>
                 </ul>
@@ -16,7 +16,7 @@
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th data-breakpoints="xs">Swift COde</th>
+                        <th data-breakpoints="xs">Swift Code</th>
                         <th data-breakpoints="xs">Branch</th>
 
 
