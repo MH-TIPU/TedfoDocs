@@ -16,16 +16,16 @@ class CreateProductDetailsTable extends Migration
         Schema::create('product_details', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('code_sku');
-            $table->string('description');
-            $table->string('quantity');
-            $table->string('unit');
-            $table->string('hs_code');
-            $table->string('gross_weight');
-            $table->string('country_of_origin');
-            $table->string('price');
-            $table->string('product_name');
-            $table->string('amount');
+            $table->string('code_sku')->nullable();
+            $table->string('description')->nullable();
+            $table->string('quantity')->nullable();
+            $table->string('unit')->nullable();
+            $table->string('hs_code')->nullable();
+            $table->string('gross_weight')->nullable();
+            $table->string('country_of_origin')->nullable();
+            $table->string('price')->nullable();
+            $table->string('product_name')->nullable();
+            $table->string('amount')->nullable();
             $table->string('proforma_id');
 
             $table->timestamps();

@@ -64,6 +64,8 @@ class CatalogueController extends Controller
 
         $ids = $request->ids;
 
+
+
 //        dd($ids);
         return view('pages/catalogues/editCatalogue',compact('seller','ids'));
 

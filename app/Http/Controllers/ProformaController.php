@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\ProductDetail;
 use App\Proforma;
 use App\User;
 use Illuminate\Http\Request;
@@ -76,12 +77,34 @@ class ProformaController extends Controller
         $proforma->port_of_loading = $request->port_of_loading;
         $proforma->port_of_discharge = $request->port_of_discharge;
 
+        $proforma->save();
 
         $ids = $request->ids;
 
-        dd($ids);
 
 
+        foreach ($ids as $id){
+            $productDetail = new ProductDetail();
+
+//            $productDetail->code_sku = User::find(Auth::id())->Product->id();
+
+            dd(User::find(Auth::id())->Product->id());
+        }
+
+//        $table->string('code_sku');
+//        $table->string('description');
+//        $table->string('quantity');
+//        $table->string('unit');
+//        $table->string('hs_code');
+//        $table->string('gross_weight');
+//        $table->string('country_of_origin');
+//        $table->string('price');
+//        $table->string('product_name');
+//        $table->string('amount');
+//        $table->string('proforma_id');
+//
+//
+//        dd($proforma->ProductDetail);
 
     }
 
