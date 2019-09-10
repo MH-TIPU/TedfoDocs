@@ -14,4 +14,6 @@ class Proforma extends Model
     public function ProductDetail(){
         return $this->hasMany('App\ProductDetail');
     }
+
+
 }

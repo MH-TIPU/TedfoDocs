@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Proforma;
 use App\User;
 use Illuminate\Http\Request;
@@ -13,7 +14,14 @@ class ProformaController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     *
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $Proformas = User::find(Auth::id())->Proforma;
@@ -44,7 +52,37 @@ class ProformaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'seller'=> 'required',
+            'buyer'=> 'required',
+            'invoice_no'=> 'required',
+            'invoice_date'=> 'required',
+            'method_of_dispatch'=> 'required',
+            'port_of_loading'=> 'required',
+            'port_of_discharge'=> 'required',
+            'type_of_shipment'=> 'required',
+            'method_of_payment'=> 'required',
+            'delivery_date'=> 'required',
+        ]);
+
+        $proforma = new Product();
+
+        $proforma->buyer_name = $request->buyer ;
+        $proforma->seller_name = $request->seller ;
+        $proforma->invoice_no = $request-> invoice_no;
+        $proforma->invoice_date = $request->invoice_date;
+        $proforma->delivery_date = $request->delivery_date ;
+        $proforma->method_of_shipping = $request->method_of_dispatch;
+        $proforma->port_of_loading = $request->port_of_loading;
+        $proforma->port_of_discharge = $request->port_of_discharge;
+
+
+        $ids = $request->ids;
+
+        dd($ids);
+
+
+
     }
 
     /**

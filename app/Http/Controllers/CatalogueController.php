@@ -41,7 +41,7 @@ class CatalogueController extends Controller
     public function create()
     {
         $products = User::find(Auth::id())->Product;
-        $sellers = User::find(Auth::id())->Seller()->paginate(2);;
+        $sellers = User::find(Auth::id())->Seller()->paginate(5);
 
 
         return view('pages/catalogues/newCatalogue',compact('products','sellers'));

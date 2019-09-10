@@ -7,7 +7,7 @@
             <div class="header">
                 <h2 class="text-secondary"> All Proformas</h2>
                 <ul class="header-dropdown m-r--5">
-                    <li> <button onclick="window.location='{{ route("proforma.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Add New</i> </button></li>
+                    <li> <button onclick="window.location='{{ route("proforma.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-plus"> Add New</i> </button></li>
                 </ul>
 
             </div>

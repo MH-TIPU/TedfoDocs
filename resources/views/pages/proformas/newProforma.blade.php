@@ -99,7 +99,7 @@
                                     <div class="form-group form-float form-group">
                                         <label for="port-of-discharge"> Port Of Discharge</label>
                                         <div class="form-line">
-                                            <input type="text" class="form-control" name="port_of_loading"  id="port-of-discharge">
+                                            <input type="text" class="form-control" name="port_of_discharge"  id="port-of-discharge">
                                         </div>
                                     </div>
                                 </div>
@@ -109,9 +109,9 @@
                                     <div class="form-group form-float form-group">
                                         <label for="seller-profile"> Type Of Shipment</label>
                                         <select class="form-control show-tick" name="type_of_shipment" required>
-                                            <option value="1">Air</option>
-                                            <option value="2">Land</option>
-                                            <option value="3">SHip</option>
+                                            <option value="air">Air</option>
+                                            <option value="land">Land</option>
+                                            <option value="ship">Ship</option>
 
                                         </select>
                                     </div>
@@ -134,19 +134,58 @@
 
                                 <div class="col-lg-2 col-md-6">
                                     <div class="form-group form-float form-group">
-                                        <label for="invoice-date"> Select Delivery Date</label>
+                                        <label for="delivery-date"> Select Delivery Date</label>
                                         <div class="form-line">
                                             <input type="date" class="form-control" name="delivery_date" id="delivery-date">
                                         </div>
                                     </div>
                                 </div>
 
+                            </div>
 
+                            <div class="row clearfix body">
+
+                                <div class="body table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <td></td>
+                                            <th data-breakpoints="xs">Photo</th>
+                                            <th>Name</th>
+                                            <th data-breakpoints="xs">code/SKU</th>
+                                            <th data-breakpoints="xs">HS Code</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        @foreach($products as $product)
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox"  id="{{$product->id}}" value="{{$product->id}}"  class="chk-col-green" name="ids[]"/>
+                                                    <label for="{{$product->id}}"></label>
+                                                </td>
+
+                                                <td>
+                                                    <img src="{{Storage::url($product->photo)}}" height="50" width="50" alt="">
+                                                </td>
+
+                                                <td>{{$product->name}}</td>
+                                                <td>{{$product->code_sku}}</td>
+                                                <td>{{$product->hs_code}}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+
+                                </div>
 
                             </div>
 
-                            <div class="body ">
-                                <div class="row clearfix">
+
+
+
+                                <div class="row clearfix body">
                                     <div class="col-sm-12">
                                         <div class="form-group form-float form-group">
                                             <input type="submit" class="btn  btn-raised btn-success waves-effect" value="Next">
@@ -156,7 +195,6 @@
                                     </div>
                                 </div>
 
-                            </div>
                         </form>
 
                     </div>

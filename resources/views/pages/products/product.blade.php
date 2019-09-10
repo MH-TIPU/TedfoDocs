@@ -8,7 +8,7 @@
             <div class="header">
                 <h2 class="text-secondary"> All Products</h2>
                 <ul class="header-dropdown m-r--5">
-                    <li> <button onclick="window.location='{{ route("product.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Add New</i> </button></li>
+                    <li> <button onclick="window.location='{{ route("product.create") }}'" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-plus"> Add New</i> </button></li>
                 </ul>
 
             </div>
@@ -32,7 +32,7 @@
                             <td>{{$product->code_sku}}</td>
                             <td>{{$product->hs_code}}</td>
                             <td>
-                                <img src="{{asset(url('storage/app/'.$product->photo))}}" height="50" width="50" alt="">
+                                <img src="{{(url('storage/app/'.$product->photo))}}" height="50" width="50" alt="">
                             </td>
 
                             <td>

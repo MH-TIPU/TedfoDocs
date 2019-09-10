@@ -44,14 +44,11 @@
     <div class="col-12">
         
         <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src="{{asset('images/tedfo.png')}}" width="20" height="20"> </a>
-            <a class="navbar-brand" href="#">T Docs</a>
+            <a class="navbar-brand" href="/"><img src="{{asset('images/tedfo.png')}}" width="20" height="20"> </a>
+            <a class="navbar-brand" href="/">T Docs</a>
         </div>
         <ul class="nav navbar-nav navbar-left">
             <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="sign-in.html" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a></li>
         </ul>
     </div>
 </nav>
@@ -73,11 +70,11 @@
     <div class="menu">
         <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-            <li> <a href="#"><i class="zmdi zmdi-home">
+            <li> <a href="/"><i class="zmdi zmdi-home">
                 </i><span>Dashboard</span></a>
             </li>
 
-            <li class="open active"> <a href="#" class="menu-toggle"><i class="zmdi zmdi-accounts"></i><span>Profiles</span></a>
+            <li> <a href="#" class="menu-toggle"><i class="zmdi zmdi-accounts"></i><span>Profiles</span></a>
                 <ul class="ml-menu">
                     <li><a href="{{route('buyer.index')}}">Buyer</a> </li>
                     <li><a href="{{route('seller.index')}}">Seller</a> </li>
@@ -96,12 +93,12 @@
 
             <li> <a href="{{route('cnf.index')}}"><i class="zmdi zmdi-boat"></i><span>CNF</span> </a> </li>
             <li><a href="{{route('product.index')}}"><i class="zmdi zmdi-codepen"></i><span>Product</span> </a></li>
-            <li><a href="{{route('catalogue.index')}}"><i class="fas fa-list"></i><span>Catalogue</span> </a></li>
+            <li><a href="{{route('catalogue.index')}}"><i class="zmdi zmdi-library"></i><span>Catalogue</span> </a></li>
 
-            <li><a href="#" class="menu-toggle"><i class="fas fa-receipt"></i><span>Documents</span></a>
+            <li><a href="#" class="menu-toggle"><i class="zmdi zmdi-file-text"></i><span>Documents</span></a>
                 <ul class="ml-menu">
 
-                    <a href="#" class="menu-toggle"><i class="far fa-file-alt"></i><span>Sales Documents</span></a>
+                    <a href="#" class="menu-toggle"><i class="zmdi zmdi-file"></i><span>Sales Documents</span></a>
                     <ul class="ml-menu">
                         <li><a href="{{route('proforma.index')}}">Proforma Invoice</a> </li>
                         <li><a href="{{route('quotation.index')}}"> Quotation</a> </li>
@@ -109,7 +106,7 @@
                         <li><a href="{{route('orderConfirmation.index')}}"> Order Confirmation</a> </li>
                     </ul>
 
-                    <a href="#" class="menu-toggle"><i class="far fa-file-alt"></i><span>Shipping Documents</span></a>
+                    <a href="#" class="menu-toggle"><i class="zmdi zmdi-file"></i><span>Shipping Documents</span></a>
                     <ul class="ml-menu">
                         <li><a href="{{route('commercialInvoice.index')}}">Commercial Invoice</a></li>
                         <li><a href="#"> Packing List</a> </li>
@@ -121,7 +118,8 @@
                 </ul>
             </li>
 
-            <li><a href="#"><i class="fas fa-chart-bar"></i><span>Report</span> </a></li>
+            <li><a href="#"><i class="zmdi zmdi-receipt"></i><span>Report</span> </a></li>
+            <li><a href="{{ route('logout') }}"><i class="zmdi zmdi-sign-in text-danger"></i><span class="text-danger">LogOut</span> </a></li>
         </ul>
             
     </div>

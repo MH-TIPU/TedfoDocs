@@ -7,7 +7,7 @@
             <div class="header">
                 <h2 class="text-secondary"> All Commercial Invoices</h2>
                 <ul class="header-dropdown m-r--5">
-                    <li> <button onclick="" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-account-add"> Create</i> </button></li>
+                    <li> <button onclick="" class="btn-sm btn-raised bg-lime waves-effect"> <i class="zmdi zmdi-plus"> Create</i> </button></li>
                 </ul>
 
             </div>

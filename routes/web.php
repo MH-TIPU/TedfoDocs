@@ -10,6 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return redirect('home');
 });
@@ -39,4 +44,7 @@ Route::resource('packingListBuyer','PackingListBuyerController');
 Route::resource('purchaseOrder','PurchaseOrderController');
 
 
-Route::get('logout', 'Auth\LoginController@logout');
+Route::get('/logout', function(){
+    Auth::logout();
+    return Redirect::to('/');
+});
