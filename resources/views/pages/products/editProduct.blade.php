@@ -91,7 +91,7 @@
                                 <div class="row">
                                     <div class="col-sm-2 imgUp">
                                         <div class="imagePreview">
-                                            <img id="default" src="{{Storage::url($product->photo)}}" height="100%" width="100%" style="background-color: white">
+                                            <img id="default" src="{{(url('storage/app/'.$product->photo))}}" height="100%" width="100%" style="background-color: white">
                                         </div>
                                         <label class="btn btn-primary">
                                             Upload <input type="file" class="uploadFile img" name="image"  style="width: 0px;height: 0px;overflow: hidden;" required>

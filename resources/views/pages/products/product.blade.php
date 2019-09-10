@@ -32,7 +32,7 @@
                             <td>{{$product->code_sku}}</td>
                             <td>{{$product->hs_code}}</td>
                             <td>
-                                <img src="{{(url('storage/app/'.$product->photo))}}" height="50" width="50" alt="">
+                                <img src="{{(url('storage/app/'.$product->photo))}}" height="50" width="50">
                             </td>
 
                             <td>

@@ -70,7 +70,7 @@ class ProductController extends Controller
         $product->hs_code_bd= $request->hs_code_bd;
 
         if ($request->hasFile('image')){
-            $product->photo= $request->image->store('public/images');
+            $product->photo = $request->image->store('public/images');
         }
 
         $product->unit= $request->unit;
@@ -85,6 +85,7 @@ class ProductController extends Controller
 
         $product->user_id = Auth::id();
         $product->save();
+        //dd($product);
 
         return redirect('product');
 

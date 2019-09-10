@@ -38,7 +38,7 @@
                                         <td>{{$catalogueItem->code_sku}}</td>
 
                                         <td>
-                                            <img src="{{Storage::url($catalogueItem->photo)}}" height="50" width="50" alt="">
+                                            <img src="{{url('storage/app/public/'.$catalogueItem->photo)}}" height="50" width="50">
                                         </td>
 
 
