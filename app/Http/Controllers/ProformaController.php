@@ -85,13 +85,12 @@ class ProformaController extends Controller
             $productDetail->code_sku = $product->code_sku;
             $productDetail->description = $product->description;
             $productDetail->price = $request->get('prices'.$id);
-
             $productDetail->proforma_id = $proforma->id;
 
             $productDetail->save();
         }
 
-        dd(1);
+
 
     }
 
@@ -103,7 +102,7 @@ class ProformaController extends Controller
      */
     public function show(Proforma $proforma)
     {
-        //
+
     }
 
     /**
@@ -135,8 +134,9 @@ class ProformaController extends Controller
      * @param  \App\Proforma  $proforma
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Proforma $proforma)
+    public function destroy(Proforma $Proforma)
     {
-        //
+        $Proforma->delete();
+        return redirect('proforma');
     }
 }

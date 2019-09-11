@@ -38,7 +38,8 @@
                                         <td>{{$catalogueItem->code_sku}}</td>
 
                                         <td>
-                                            <img src="{{url('storage/app/public/'.$catalogueItem->photo)}}" height="50" width="50">
+                                            <img src="{{url('storage/'.$catalogueItem->photo)}}" height="50" width="50">
+
                                         </td>
 
 
@@ -58,11 +59,11 @@
 
                 <div class="row">
                     <div class=" col-md-1 text-right">
-                        <a href="#" class="btn btn-raised btn-success"><i class="zmdi zmdi-print"></i></a>
+                        <a href="{{ route('catalogue.print', $catalogue->id) }}" target="_blank" class="btn btn-raised btn-success"><i class="zmdi zmdi-print"></i></a>
                     </div>
-                    <div class=" col-md-1 text-right">
-                        <a href="#" class="btn btn-raised btn-danger"><i class="zmdi zmdi-email"></i></a>
-                    </div>
+                    {{--<div class=" col-md-1 text-right">--}}
+                        {{--<a href="{{ route('catalogue.mail',$catalogueItem->id) }}" class="btn btn-raised btn-danger"><i class="zmdi zmdi-email"></i></a>--}}
+                    {{--</div>--}}
                 </div>
             </div>
 

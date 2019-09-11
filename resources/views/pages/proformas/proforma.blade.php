@@ -27,14 +27,14 @@
 
                     @foreach($Proformas as $key=>$Proforma)
                         <tr>
-                            <th>{{$key}}</th>
+                            <th>{{$key + 1}}</th>
                             <td>{{$Proforma->invoice_no}}</td>
                             <td>{{$Proforma->buyer_name}}</td>
                             <td>{{$Proforma->delivery_date}}</td>
 
 
                             <td>
-                                <a href="{{ route('proforma.edit', $Proforma->id) }}"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">Edit</button></a>
+                                <a href="{{ route('proforma.show', $Proforma->id) }}"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">View</button></a>
                             </td>
 
                             <td>

@@ -61,35 +61,30 @@ class ProductController extends Controller
             'cost_of_packing'=> 'required',
             'cash_incentive'=> 'required',
         ]);
+
         $product = new Product();
-
-        $product->code_sku = $request->code_sku;
-        $product->name= $request->name;
-        $product->description= $request->description;
-        $product->hs_code= $request->hs_code;
-        $product->hs_code_bd= $request->hs_code_bd;
-
-        if ($request->hasFile('image')){
-            $product->photo = $request->image->store('public/images');
+        $product->code_sku          = $request->code_sku;
+        $product->name              = $request->name;
+        $product->description       = $request->description;
+        $product->hs_code           = $request->hs_code;
+        $product->hs_code_bd        = $request->hs_code_bd;
+        if ($request->hasFile('image'))
+        {
+            $product->photo         = $request->image->store('/public/products/');
         }
 
-        $product->unit= $request->unit;
-        $product->net_weight= $request->net_weight;
-        $product->gross_weight= $request->gross_weight;
-        $product->cbm= $request->cbm;
-        $product->cost_of_product= $request->cost_of_product;
-
-        $product->cost_of_packing= $request->cost_of_packing;
-        $product->cash_incentive= $request->cash_incentive;
-
-
-        $product->user_id = Auth::id();
+        $product->photo             = str_replace('public','',$product->photo);
+        $product->unit              = $request->unit;
+        $product->net_weight        = $request->net_weight;
+        $product->gross_weight      = $request->gross_weight;
+        $product->cbm               = $request->cbm;
+        $product->cost_of_product   = $request->cost_of_product;
+        $product->cost_of_packing   = $request->cost_of_packing;
+        $product->cash_incentive    = $request->cash_incentive;
+        $product->user_id           = Auth::id();
         $product->save();
-        //dd($product);
 
         return redirect('product');
-
-
     }
 
     /**
@@ -148,12 +143,12 @@ class ProductController extends Controller
         $product->description= $request->description;
         $product->hs_code= $request->hs_code;
         $product->hs_code_bd= $request->hs_code_bd;
-
-        if ($request->hasFile('image')){
+        if ($request->hasFile('image'))
+        {
             Storage::delete($product->photo);
-            $product->photo= $request->image->store('public/images');
+            $product->photo         = $request->image->store('/public/products/');
         }
-
+        $product->photo             = str_replace('public','',$product->photo);
         $product->unit= $request->unit;
         $product->net_weight= $request->net_weight;
         $product->gross_weight= $request->gross_weight;

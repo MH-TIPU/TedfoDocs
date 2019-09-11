@@ -33,6 +33,8 @@ Route::resource('cnf','CnfController');
 Route::resource('product','ProductController');
 Route::resource('sellerBank','SellerBankController');
 Route::resource('catalogue','CatalogueController');
+Route::get('catalogue/print/{id}', 'CatalogueController@print')->name('catalogue.print');
+Route::get('catalogue/mail/{id}', 'CatalogueController@send_mail')->name('catalogue.mail');
 Route::resource('proforma','ProformaController');
 
 

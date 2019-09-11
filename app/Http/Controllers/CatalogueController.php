@@ -10,6 +10,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendCatalogue;
 
 
 class CatalogueController extends Controller
@@ -109,10 +111,7 @@ class CatalogueController extends Controller
     {
 
         $catalogue = new Catalogue();
-
         $seller = Seller::find($id);
-
-
         $catalogue->name = $seller->business_name;
         $catalogue->email = $seller->email;
         $catalogue->phone = $seller->phone_no;
@@ -160,5 +159,19 @@ class CatalogueController extends Controller
         }
         $catalogue->delete();
         return redirect('catalogue');
+    }
+
+    public function print($id)
+    {
+        $catalogue = Catalogue::find($id);
+        $catalogueItems = $catalogue->CatalogueItem;
+        return view('pages.catalogues.print', compact('catalogueItems','catalogue'));
+    }
+
+    public function send_mail($id)
+    {
+        $catalogue = Catalogue::find($id);
+        $catalogueItems = $catalogue->CatalogueItem;
+        Mail::to(['emial'=>'test@tesrt.com'])->send( new SendCatalogue($catalogueItems, $catalogue));
     }
 }

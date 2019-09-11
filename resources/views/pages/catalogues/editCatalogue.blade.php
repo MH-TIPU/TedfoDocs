@@ -54,10 +54,10 @@
                                                 {{\App\Product::find($id)->description}}
                                             </td>
 
-                                            <td class="col-sm-1">
+                                            <td>
                                                 <input type="text" class="form-control" name="moqs{{\App\Product::find($id)->id}}"  value="1"  required/>
                                             </td>
-                                            <td class="col-sm-1">
+                                            <td>
                                                 <input type="text" class="form-control" name="prices{{\App\Product::find($id)->id}}" value="{{\App\Product::find($id)->cost_of_product}}" required/>
 
                                             </td>

@@ -32,9 +32,8 @@
                             <td>{{$product->code_sku}}</td>
                             <td>{{$product->hs_code}}</td>
                             <td>
-                                <img src="{{(url('storage/app/'.$product->photo))}}" height="50" width="50">
+                                <img src="{{(url('storage/'.$product->photo))}}" height="50" width="50">
                             </td>
-
                             <td>
                                 <a href="{{ route('product.edit', $product->id) }}"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">Edit</button></a>
                             </td>
