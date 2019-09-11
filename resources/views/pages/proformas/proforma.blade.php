@@ -34,7 +34,7 @@
 
 
                             <td>
-                                <a href="{{ route('proforma.show', $Proforma->id) }}"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">View</button></a>
+                                <a href="{{ route('proforma.show', $Proforma)}}"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">View</button></a>
                             </td>
 
                             <td>

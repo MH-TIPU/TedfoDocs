@@ -34,6 +34,7 @@ Route::resource('product','ProductController');
 Route::resource('sellerBank','SellerBankController');
 Route::resource('catalogue','CatalogueController');
 Route::get('catalogue/print/{id}', 'CatalogueController@print')->name('catalogue.print');
+Route::get('proforma/print/{proforma}', 'ProformaController@print')->name('proforma.print');
 Route::get('catalogue/mail/{id}', 'CatalogueController@send_mail')->name('catalogue.mail');
 Route::resource('proforma','ProformaController');
 

@@ -84,13 +84,15 @@ class ProformaController extends Controller
             $product = Product::find($id);
             $productDetail->code_sku = $product->code_sku;
             $productDetail->description = $product->description;
-            $productDetail->price = $request->get('prices'.$id);
+            $productDetail->unit = $product->unit;
+
+            $productDetail->price = $product->cost_of_product;
             $productDetail->proforma_id = $proforma->id;
 
             $productDetail->save();
         }
 
-
+        return redirect('proforma');
 
     }
 
@@ -102,7 +104,8 @@ class ProformaController extends Controller
      */
     public function show(Proforma $proforma)
     {
-
+        $productItems = $proforma->ProductDetail;
+        return view('pages/proformas/viewProforma',compact('proforma','productItems'));
     }
 
     /**
@@ -139,4 +142,12 @@ class ProformaController extends Controller
         $Proforma->delete();
         return redirect('proforma');
     }
+
+    public function print(Proforma $proforma)
+    {
+        $productItems = $proforma->ProductDetail;
+
+        return view('pages.proformas.print', compact('proforma','productItems'));
+    }
+
 }

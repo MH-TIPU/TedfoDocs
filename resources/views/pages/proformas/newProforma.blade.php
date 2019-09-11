@@ -52,7 +52,7 @@
                                         <select class="form-control show-tick" name="buyer" id="buyer-profile" required>
                                             <option value="">Select</option>
                                             @foreach($buyers as $buyer)
-                                                <option value="{{$buyer->id}}">{{$buyer->business_name}}</option>
+                                                <option value="{{$buyer->business_name}}">{{$buyer->business_name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -123,7 +123,7 @@
                                         <select class="form-control show-tick" name="method_of_payment" required>
                                             <option value="">select</option>
                                             @foreach($buyerBanks as $buyerBank)
-                                                <option value="{{$buyerBank->id}}">{{$buyerBank->id}}</option>
+                                                <option value="{{$buyerBank->name}}">{{$buyerBank->name}}</option>
                                             @endforeach
 
 
@@ -188,7 +188,7 @@
                                 <div class="row clearfix body">
                                     <div class="col-sm-12">
                                         <div class="form-group form-float form-group">
-                                            <input type="submit" class="btn  btn-raised btn-success waves-effect" value="Next">
+                                            <input type="submit" class="btn  btn-raised btn-success waves-effect" value="Create">
                                             <a href="{{route('proforma.index')}}"> <button type="button"  class="btn  btn-raised btn-danger waves-effect">Cancle</button> </a>
 
                                         </div>
