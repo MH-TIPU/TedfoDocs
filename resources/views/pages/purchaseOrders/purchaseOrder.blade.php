@@ -27,27 +27,27 @@
 
                     <tbody>
 
-                    @for($i= 1; $i< 10 ; $i++)
-                        <tr>
-                            <td> {{$i}}</td>
-                            <td> buyer {{$i}} </td>
-                            <td> Address {{$i}} </td>
-                            <td> 0160000000{{$i}} </td>
-                            <td> {{$i}}635 </td>
-                            <td> 1{{$i}}-April-2019 </td>
-                            <td>
-                                <a href="#"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">Edit</button></a>
-                            </td>
+                    {{--@for($i= 1; $i< 10 ; $i++)--}}
+                        {{--<tr>--}}
+                            {{--<td> {{$i}}</td>--}}
+                            {{--<td> buyer {{$i}} </td>--}}
+                            {{--<td> Address {{$i}} </td>--}}
+                            {{--<td> 0160000000{{$i}} </td>--}}
+                            {{--<td> {{$i}}635 </td>--}}
+                            {{--<td> 1{{$i}}-April-2019 </td>--}}
+                            {{--<td>--}}
+                                {{--<a href="#"><button type="button" class="btn-sm  btn-raised btn-success waves-effect">Edit</button></a>--}}
+                            {{--</td>--}}
 
-                            <td>
-                                <form action="#" method="#">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn-sm  btn-raised btn-danger waves-effect">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endfor
+                            {{--<td>--}}
+                                {{--<form action="#" method="#">--}}
+                                    {{--@csrf--}}
+                                    {{--@method('DELETE')--}}
+                                    {{--<button type="submit" class="btn-sm  btn-raised btn-danger waves-effect">Delete</button>--}}
+                                {{--</form>--}}
+                            {{--</td>--}}
+                        {{--</tr>--}}
+                    {{--@endfor--}}
 
                     </tbody>
                 </table>

@@ -101,24 +101,24 @@
                     <a href="#" class="menu-toggle"><i class="zmdi zmdi-file"></i><span>Sales Documents</span></a>
                     <ul class="ml-menu">
                         <li><a href="{{route('proforma.index')}}">Proforma Invoice</a> </li>
-                        <li><a href="{{route('quotation.index')}}"> Quotation</a> </li>
+                        {{--<li><a href="{{route('quotation.index')}}"> Quotation</a> </li>--}}
                         <li><a href="{{route('purchaseOrder.index')}}"> Purchase Order</a> </li>
-                        <li><a href="{{route('orderConfirmation.index')}}"> Order Confirmation</a> </li>
+                        {{--<li><a href="{{route('orderConfirmation.index')}}"> Order Confirmation</a> </li>--}}
                     </ul>
 
                     <a href="#" class="menu-toggle"><i class="zmdi zmdi-file"></i><span>Shipping Documents</span></a>
                     <ul class="ml-menu">
                         <li><a href="{{route('commercialInvoice.index')}}">Commercial Invoice</a></li>
-                        <li><a href="#"> Packing List</a> </li>
-                        <li><a href="{{route('certificate.index')}}"> Certificate of Origin</a></li>
-                        <li><a href="#"> Packing List for Customer</a> </li>
-                        <li><a href="#"> Packing List for Buyer</a> </li>
+                        {{--<li><a href="#"> Packing List</a> </li>--}}
+                        {{--<li><a href="{{route('certificate.index')}}"> Certificate of Origin</a></li>--}}
+                        {{--<li><a href="#"> Packing List for Customer</a> </li>--}}
+                        {{--<li><a href="#"> Packing List for Buyer</a> </li>--}}
                     </ul>
 
                 </ul>
             </li>
 
-            <li><a href="#"><i class="zmdi zmdi-receipt"></i><span>Report</span> </a></li>
+            {{--<li><a href="#"><i class="zmdi zmdi-receipt"></i><span>Report</span> </a></li>--}}
             <li><a href="{{ route('logout') }}"><i class="zmdi zmdi-sign-in text-danger"></i><span class="text-danger">LogOut</span> </a></li>
         </ul>
             
