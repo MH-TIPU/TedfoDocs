@@ -18,7 +18,7 @@
                     <tr>
                         <th>#</th>
                         <th>Invoice No</th>
-                        <th data-breakpoints="xs">Buyer Ref no</th>
+                        <th data-breakpoints="xs">Buyer</th>
                         <th data-breakpoints="xs">Delivery Date</th>
                     </tr>
                     </thead>
@@ -29,7 +29,7 @@
                         <tr>
                             <th>{{$key}}</th>
                             <td>{{$Proforma->invoice_no}}</td>
-                            <td>{{$Proforma->buyer_ref_no}}</td>
+                            <td>{{$Proforma->buyer_name}}</td>
                             <td>{{$Proforma->delivery_date}}</td>
 
 

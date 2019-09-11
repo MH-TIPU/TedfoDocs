@@ -57,17 +57,10 @@ class ProformaController extends Controller
             'seller'=> 'required',
             'buyer'=> 'required',
             'invoice_no'=> 'required',
-            'invoice_date'=> 'required',
-            'method_of_dispatch'=> 'required',
-            'port_of_loading'=> 'required',
-            'port_of_discharge'=> 'required',
-            'type_of_shipment'=> 'required',
-            'method_of_payment'=> 'required',
             'delivery_date'=> 'required',
         ]);
 
-        $proforma = new Product();
-
+        $proforma = new Proforma();
         $proforma->buyer_name = $request->buyer ;
         $proforma->seller_name = $request->seller ;
         $proforma->invoice_no = $request-> invoice_no;
@@ -77,34 +70,28 @@ class ProformaController extends Controller
         $proforma->port_of_loading = $request->port_of_loading;
         $proforma->port_of_discharge = $request->port_of_discharge;
 
+        $proforma->buyer_ref_no = 2 ;
+        $proforma->terms = "null" ;
+        $proforma->user_id = Auth::id();
+
         $proforma->save();
 
-        $ids = $request->ids;
 
+        for($i = 0; $i < sizeof($request->ids); $i++){
 
-
-        foreach ($ids as $id){
             $productDetail = new ProductDetail();
+            $id = $request->ids[$i];
+            $product = Product::find($id);
+            $productDetail->code_sku = $product->code_sku;
+            $productDetail->description = $product->description;
+            $productDetail->price = $request->get('prices'.$id);
 
-//            $productDetail->code_sku = User::find(Auth::id())->Product->id();
+            $productDetail->proforma_id = $proforma->id;
 
-            dd(User::find(Auth::id())->Product->id());
+            $productDetail->save();
         }
 
-//        $table->string('code_sku');
-//        $table->string('description');
-//        $table->string('quantity');
-//        $table->string('unit');
-//        $table->string('hs_code');
-//        $table->string('gross_weight');
-//        $table->string('country_of_origin');
-//        $table->string('price');
-//        $table->string('product_name');
-//        $table->string('amount');
-//        $table->string('proforma_id');
-//
-//
-//        dd($proforma->ProductDetail);
+        dd(1);
 
     }
 
