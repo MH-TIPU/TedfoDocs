@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f941f4b3-b8b9-4d4c-9d60-c61c06ec368f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/catalogues/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/catalogues/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/commercialInvoices/commercialInvoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/commercialInvoices/commercialInvoice.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/purchaseOrders/purchaseOrder.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/purchaseOrders/purchaseOrder.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="f941f4b3-b8b9-4d4c-9d60-c61c06ec368f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +55,7 @@
     <session id="825659006">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
@@ -449,7 +444,7 @@
       <workItem from="1564423184594" duration="28700000" />
       <workItem from="1567970302305" duration="3674000" />
       <workItem from="1568054060376" duration="39374000" />
-      <workItem from="1568226436395" duration="13398000" />
+      <workItem from="1568226436395" duration="13997000" />
     </task>
     <task id="LOCAL-00001" summary="files">
       <created>1564397701122</created>
@@ -462,11 +457,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91228000" />
+    <option name="totallyTimeSpent" value="91827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.252349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
